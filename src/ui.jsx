@@ -24,8 +24,8 @@ const NavigationBar = () => {
         <>
             <AuthenticatedTemplate>
                 <DropdownButton variant="warning" className="ml-auto" drop="left" title="Sign Out">
-                    <Dropdown.Item as="button" onClick={() => instance.logoutPopup({postLogoutRedirectUri: "/", mainWindowRedirectUri: "/"})}>Sign out using Popup</Dropdown.Item>
-                    <Dropdown.Item as="button" onClick={() => instance.logoutRedirect({postLogoutRedirectUri: "/"})}>Sign out using Redirect</Dropdown.Item>
+                    <Dropdown.Item as="button" onClick={() => instance.logoutPopup({postLogoutRedirectUri: "/redirect-test", mainWindowRedirectUri: "/redirect-test"})}>Sign out using Popup</Dropdown.Item>
+                    <Dropdown.Item as="button" onClick={() => instance.logoutRedirect({postLogoutRedirectUri: "/redirect-test"})}>Sign out using Redirect</Dropdown.Item>
                 </DropdownButton>
                 <Button variant="warning" onClick={() => instance.logout()} className="ml-auto">Sign Out</Button>
             </AuthenticatedTemplate>
